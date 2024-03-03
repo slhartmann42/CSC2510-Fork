@@ -13,48 +13,47 @@
 #data_files_moved=0
 #data_file_bytes=0
 
-
 #directory_checks
-dnm='images'
-if [ /images ]; then
+dnm="images"
+if [ -d "$dnm" ]; then
 	echo "The directory $dnm already exists."
 else
-	mkdir $dnm; echo "Directory for $dnm was created."
+	mkdir $dnm; echo "The directory $dnm was created."
 fi
 
 #documents
-dnm='documents'
-if [ /$dnm ]; then
-	echo "The directory $dnm exists."
-else
-	mkdir $dnm; echo "Directory for $dnm was created."
-fi
-
-dnm='pdfs'
-if [ /$dnm ]; then
+dnm="documents"
+if [ -d "$dnm" ]; then
 	echo "The directory $dnm already exists."
 else
 	mkdir $dnm; echo "The directory $dnm was created."
 fi
 
-dnm='executables'
-if [ /$dnm ]; then
-	echo "The directory $dnm already exists."
-else
-	mkdir $dnm; echo "The directory $dnm was creted."
-fi
-
-dnm='data'
-if [ /$dnm ]; then
+dnm="pdfs"
+if [ -d "$dnm" ]; then
 	echo "The directory $dnm already exists."
 else
 	mkdir $dnm; echo "The directory $dnm was created."
 fi
 
-dnm='unknown'
-if [ /$dnm ]; then
+dnm="executables"
+if [ -d "$dnm" ]; then
 	echo "The directory $dnm already exists."
 else
-	mkdir $dnm; echo "The directory $dnm exists."
+	mkdir $dnm; echo "The directory $dnm was created."
+fi
+
+dnm="data"
+if [ -d "$dnm" ]; then
+	echo "The directory $dnm already exists."
+else
+	mkdir $dnm; echo "The directory $dnm was created."
+fi
+
+dnm="unknown"
+if [ -d "$dnm" ]; then
+	echo "The directory $dnm already exists."
+else
+	mkdir $dnm; echo "The directory $dnm was created."
 fi
 
