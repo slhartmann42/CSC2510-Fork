@@ -15,52 +15,46 @@
 
 
 #directory_checks
-dnm="images"
-if [[ -d /$dnm ]]; then
-	echo "The directory $dnm exists."
+dnm='images'
+if [ /images ]; then
+	echo "The directory $dnm already exists."
 else
-	mkdir $dnm
-	echo "Directory for $dnm created."
+	mkdir $dnm; echo "Directory for $dnm was created."
 fi
 
 #documents
-dnm="documents"
-if [[ -d /$dnm ]]; then
+dnm='documents'
+if [ /$dnm ]; then
 	echo "The directory $dnm exists."
 else
-	mkdir $dnm
-	echo "Directory for $dnm exists."
+	mkdir $dnm; echo "Directory for $dnm was created."
 fi
 
-dnm="pdfs"
-if [[ -d /$dnm ]]; then
-	echo "The directory $dnm exists."
+dnm='pdfs'
+if [ /$dnm ]; then
+	echo "The directory $dnm already exists."
 else
-	mkdir $dnm
-	echo "The directory $dnm exists."
+	mkdir $dnm; echo "The directory $dnm was created."
 fi
 
-dnm="executables"
-if [[ -d /$dnm ]]; then
-	echo "The directory $dnm exists."
+dnm='executables'
+if [ /$dnm ]; then
+	echo "The directory $dnm already exists."
 else
-	mkdir $dnm
-	echo "The directory $dnm exists."
+	mkdir $dnm; echo "The directory $dnm was creted."
 fi
 
-dnm="data"
-if [[ -d /$dnm ]]; then
-	echo "The directory $dnm exists."
+dnm='data'
+if [ /$dnm ]; then
+	echo "The directory $dnm already exists."
 else
-	mkdir $dnm
-	echo "The directory $dnm exists."
+	mkdir $dnm; echo "The directory $dnm was created."
 fi
 
-dnm="unknown"
-if [[ -d /$dnm ]]; then
-	echo "The directory $dnm exists."
+dnm='unknown'
+if [ /$dnm ]; then
+	echo "The directory $dnm already exists."
 else
-	mkdir $dnm
-	echo "The directory $dnm exists."
+	mkdir $dnm; echo "The directory $dnm exists."
 fi
 
